@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS Fact Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="parts-filter">
+            <div class="filter-title">
+                <i class="fas fa-microchip"></i>
+                CS Fact Generator
+            </div>
+            <div class="parts-grid">
+                <button class="part-btn active" data-part="all">
+                    <i class="fas fa-border-all"></i>
+                    All
+                </button>
+                <button class="part-btn" data-part="cpu">
+                    <i class="fas fa-microchip"></i>
+                    CPU
+                </button>
+                <button class="part-btn" data-part="memory">
+                    <i class="fas fa-memory"></i>
+                    Memory
+                </button>
+                <button class="part-btn" data-part="storage">
+                    <i class="fas fa-hdd"></i>
+                    Storage
+                </button>
+                <button class="part-btn" data-part="gpu">
+                    <i class="fas fa-tv"></i>
+                    GPU
+                </button>
+            </div>
+        </div>
+
+        <div class="timeline-container">
+            <div class="era-selector">
+                <div class="era active" data-era="pioneer">
+                    <i class="fas fa-cogs"></i>
+                    <span>Pioneer Era</span>
+                    <small>1800s-1950s</small>
+                </div>
+                <div class="era" data-era="revolution">
+                    <i class="fas fa-microchip"></i>
+                    <span>Digital Revolution</span>
+                    <small>1960s-1990s</small>
+                </div>
+                <div class="era" data-era="modern">
+                    <i class="fas fa-globe"></i>
+                    <span>Internet Age</span>
+                    <small>1990s-2010s</small>
+                </div>
+                <div class="era" data-era="future">
+                    <i class="fas fa-robot"></i>
+                    <span>AI Era</span>
+                    <small>2010s-Present</small>
+                </div>
+            </div>
+
+            <div class="fact-display">
+                <div class="time-machine">
+                    <div class="portal-effect"></div>
+                    <div class="fact-content">
+                        <div class="fact-header">
+                            <span class="year"></span>
+                            <span class="location"></span>
+                        </div>
+                        <p class="fact-text">Select an era to begin your journey through computer science history!</p>
+                        <div class="fact-footer">
+                            <button class="impact-btn">
+                                <i class="fas fa-impact"></i>
+                                Show Impact
+                            </button>
+                            <button class="related-btn">
+                                <i class="fas fa-link"></i>
+                                Related Events
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interaction-panel">
+                <button class="time-travel-btn">
+                    <i class="fas fa-random"></i>
+                    Time Travel
+                </button>
+                <div class="fact-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="invention">Inventions</button>
+                    <button class="category-btn" data-category="person">People</button>
+                    <button class="category-btn" data-category="event">Events</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="impactModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Historical Impact</h2>
+            <div class="impact-content"></div>
+            <div class="impact-timeline"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
